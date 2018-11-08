@@ -1,0 +1,108 @@
+
+body{
+  margin:50px;
+  background: #2D728F;
+  h1{
+    color: #F5EE9E;
+    text-align: center;
+  }
+  #containerMachine{
+    display: flex;
+    background: #3B8EA5;
+    align-items: center;
+    margin:auto;
+    max-width: 900px;
+    #container-pads{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      background: #3B8EA5;
+      flex-basis: 75%;
+      .drum-pad{
+        font-size: 40px;
+        text-align: center;
+        color: #F5EE9E;
+        cursor: pointer;
+        flex-basis: 33%;
+        .label-pad{
+          background: #AB3428;
+          box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
+          padding:20px;
+          font-size: 24px;
+          margin: 8px;
+        }
+      }
+    }
+    #display{
+      color: #F5EE9E;
+      padding: 10px;
+      display: flex;
+      flex-basis: 25%;
+      flex-direction: column;
+      text-align: center;
+      h3{
+        color: #ebb33a;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      h4{
+        font-size: 30px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 500px) {
+  body{
+    #containerMachine{flex-direction: column;}
+  } 
+}
+
+@media (max-width: 360px) {
+  
+  body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1{
+      margin: 0;
+    }
+    #containerMachine{
+      display: flex;
+      margin:auto;
+      #container-pads{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        flex-basis: 75%;
+        .drum-pad{
+          font-size: 40px;
+          text-align: center;
+          color: #F5EE9E;
+          flex-basis: 33%;
+          .label-pad{
+            background: #AB3428;
+            box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.75);
+            padding:20px;
+            font-size: 24px;
+            margin: 8px;
+          }
+        }
+      }
+      #display{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-basis: 25%;
+        h4{
+          text-align: center;
+          font-size: 30px;
+        }
+      }
+
+    }
+  }
+}
